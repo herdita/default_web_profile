@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+@import '../mixin';
+@import '../variable';
+@import '../font';
+
+/* SASS UNTUK BREADCRUMB */
+
+/*-----BREADCRUMB-----*/
+.breadcrumbPage {
+    height: 45px;
+    overflow: hidden;
+    @include flexbox;
+    @include align-items(center);
+    border: 1px dashed #a6a6a6;
+    border-left: 0;
+    border-right: 0;
+    background-color: #FFF;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    ul {
+        @include flexbox;
+        @media screen and (max-width: 480px) {
+            @include flex-wrap(wrap);
+        }
+        li {
+            font-size: 88%;
+            letter-spacing: 1px;
+            color: #707070;
+            margin-right: 35px;
+            word-break: keep-all;
+            a { 
+                img {
+                    height: 18px;
+                    position: relative;
+                    top: -2px;
+                }
+                &.active {
+                    text-decoration: underline;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &.arrow {
+                position: relative;
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    left: -20px;
+                    display: block;
+                    content: '';
+                    height: 8px;
+                    width: 8px;
+                    border: 1px solid #888;
+                    border-left-width: 0;
+                    border-top-width: 0;
+                    -webkit-transform: translate(0, -50%) rotate(-45deg);
+                    -ms-transform: translate(0, -50%) rotate(-45deg);
+                    transform: translate(0, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+    
+}

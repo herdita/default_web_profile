@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@import 'mixin';
+@import 'reset';
+@import 'variable';
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $quicksand;
+	color: $primary;
+	@include box-sizing(border-box);
+    overflow-x: hidden;
+    font-feature-settings: "palt";
+    font-size: 16px;
+}
+
+/* PLEASE SET FONT-SIZE AFTER TAG BODY WITH PERCENT */
+/* base font
+===============================================================*/
+/*
+10px = 63%   |   17px = 106%   |   28px = 175%   
+11px = 69%   |   18px = 113%   |   30px = 188%
+12px = 75%   |   19px = 119%   |   32px = 200%
+13px = 81%   |   20px = 125%
+14px = 88%   |   22px = 138%
+15px = 94%   |   24px = 150%
+16px = 100%  |   25px = 156%
+*/
+
+
+#AllBox {
+    @include transition(all .5s);
+}
+
+/* HEADER */
+@import 'component/header.scss';
+
+/* FOOTER */
+@import 'component/footer.scss';
+
+/* MAINVISUAL */
+@import 'component/mainvisual.scss';
+
+/* BREADCRUMB */
+@import 'component/breadcrumb.scss';
+
+#main {
+    /* CONTENT TOP PAGE */
+    @import 'pages/topPage.scss';
+    /*ERROR PAGE*/
+    @import 'pages/error404.scss';  
+    /*CONTENT COMINGSOON PAGE*/
+    @import 'pages/comingsoon.scss';
+}
+
+

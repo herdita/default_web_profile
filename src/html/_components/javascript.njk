@@ -1,0 +1,65 @@
+<script type="text/javascript" src="{{ base_path }}assets/js/jquery.js"></script>
+<script type="text/javascript" src="{{ base_path }}assets/js/popper.min.js"></script>
+<script type="text/javascript" src="{{ base_path }}assets/js/bootstrap.min.js"></script>
+
+<script>
+    // HAMBURGER MENU
+    $('.icon-menu').click(function () {
+        $('.navSp').toggleClass('active');
+        $('.navSp').stop().slideToggle();
+        $(this).toggleClass('is-active');
+    });
+    // Child NAvigation Menu Sp
+    $('.navSp .linkSp').click(function (e) {
+        // e.preventDefault();
+        $(this).next('ul.subMenu').stop().slideToggle();
+        $(this).toggleClass('nav-change');
+    });
+    // Add animation scroll when hover to header
+    if (window.matchMedia("(min-width: 1025px)").matches) {
+        function init() {
+            // スクロールして何ピクセルでアニメーションさせるか
+            var px_change = 150;
+
+            // スクロールのイベントハンドラを登録
+            window.addEventListener('scroll', function (e) {
+                // 変化するポイントまでスクロールしたらクラスを追加
+                if ($(window).scrollTop() > px_change) {
+                    $("#header").addClass("scroll");
+                    // 変化するポイント以前であればクラスを削除
+                } else if ($(".header").hasClass("fixed")) {
+                    $("#header").removeClass("scroll");
+                }
+            });
+        }
+        window.onload = init();
+    }
+</script>
+
+{% block additionalJavascript %}
+<script>
+
+    var coll = document.getElementsByClassName("question");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("is-active");
+            $(this).siblings('.answer').stop().slideToggle();
+        });
+    }
+      
+    </script>
+{% endblock %}
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,
+    once: true,
+  })
+
+  AOS.init({
+    disable: 'mobile'
+  }); 
+</script>

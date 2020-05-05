@@ -1,0 +1,43 @@
+<!--BEFORE PUBLISH, BE CAREFULL WITH LINK TO ASSETS OR TO ANOTHER PAGE-->
+
+{% extends "_layouts/base.njk" %} 
+
+{% set base_path = "" %}
+{% set page_title = " " %}
+{% set page_description = "" %}
+{% set page_keyword = "" %}
+
+<!-- PLEASE ADD CSS BELOW IF THERE IS ADDITIONAL CSS -->
+{% block additionalCss %}{% endblock %}
+
+<!-- PLEASE ADD CSS BELOW IF THERE IS ADDITIONAL JAVASCRIPT -->
+{% block additionalJavascript %}{% endblock %}
+
+<!-- MAIN CONTENT ERROR 404 PAGE -->
+{% block main %}
+{{ super() }}
+
+   <main id="main" class="error404">
+        <!-- BREADCRUMB -->
+        <section class="breadcrumbPage">
+            <div class="cont">
+                <div class="inner">
+                    <ul>
+                        <li><a href="index.html" class="under">トップページ</a></li>
+                        <li class="arrow">error_404</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="sectionPage firstRow">
+            <div class="cont">
+                <div class="inner">
+                    <h2>404</h2>
+                    <p>お探しのページは見つかりませんでした。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

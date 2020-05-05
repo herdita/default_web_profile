@@ -1,0 +1,41 @@
+{% extends "_layouts/base.njk" %} 
+
+{% set base_path = "" %}
+{% set page_title = " " %}
+{% set page_description = "" %}
+{% set page_keyword = "" %}
+
+<!-- PLEASE ADD CSS BELOW IF THERE IS ADDITIONAL CSS -->
+{% block additionalCss %}{% endblock %}
+
+<!-- PLEASE ADD CSS BELOW IF THERE IS ADDITIONAL JAVASCRIPT -->
+{% block additionalJavascript %}{% endblock %}
+
+<!-- MAIN CONTENT COMINGSOON PAGE -->
+{% block main %}
+{{ super() }}
+
+    <main id="main" class="comingsoon">
+        <!-- BREADCRUMB -->
+        <section class="breadcrumbPage">
+            <div class="cont">
+                <div class="inner">
+                    <ul>
+                        <li><a href="index.html" class="under">トップページ</a></li>
+                        <li class="arrow">準備中</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="sectionPage firstRow">
+            <div class="cont">
+                <div class="inner">
+                    <h2>準備中</h2>
+                    <p>只今、当ページが準備中です。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

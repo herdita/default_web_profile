@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+
+		<!-- TITLE -->
+		<title>{{ page_title }}</title>
+
+		<!-- Keywords & Description -->
+		<meta name="description" content="{{ page_description }}">
+		<meta name="keywords" content="{{ page_keyword }}">
+		<!-- End keywords & Description -->
+
+		<!-- Favicon -->
+		<link rel="icon" href="{{ base_path }}assets/img/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="{{ base_path }}assets/img/favicon.ico" type="image/x-icon" />
+
+		<!-- Link Base CSS -->
+		<link rel="stylesheet" type="text/css" href="{{ base_path }}assets/css/bootstrap.min.css">		
+		<link rel="stylesheet" type="text/css" href="{{ base_path }}assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ base_path }}assets/css/animate.css">
+		<link rel="stylesheet" type="text/css" href="{{ base_path }}assets/css/hamburger.css">
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+		{% block additionalCss %}{% endblock %}
+		<link rel="stylesheet" type="text/css" href="{{ base_path }}assets/css/style.css">
+		<link rel="stylesheet" media="print" type="text/css" href="{{ base_path }}assets/css/print.css">
+
+		{% block css %}{% endblock %}
+
+		<!-- META OG-->
+		{% block meta_og %}{% endblock %}
+
+		<!-- GOOGLE ANALYTICS -->
+	</head>
+
+	<body>
+
+		<div id="AllBox">
+			<!-- HEADER -->
+			{% block header %}
+				{% include "_components/header.njk" %}
+			{% endblock %}
+
+			<!-- MAIN CONTENT -->
+			{% block main %}{% endblock %}
+
+			<!-- FOOTER -->
+			{% block footer %}
+				{% include "_components/footer.njk" %}
+			{% endblock %}
+		</div>
+
+		<!-- JAVASCRIPT -->
+		{% block javascript %}
+			{% include "_components/javascript.njk" %}
+		{% endblock %}
+		{% block additionalJavascript %}{% endblock %}
+	</body>
+</html>

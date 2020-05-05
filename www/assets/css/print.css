@@ -1,0 +1,230 @@
+/*OPACITY*/
+/*TRANSITION*/
+/*TRANSFORM*/
+/*FLEXBOX*/
+/*BORDER RADIUS*/
+/*BOX SHADOW*/
+/*BOX SIZING*/
+/*FILTER*/
+/* BREAKPOINT */
+/*OPACITY*/
+/*TRANSITION*/
+/*TRANSFORM*/
+/*FLEXBOX*/
+/*BORDER RADIUS*/
+/*BOX SHADOW*/
+/*BOX SIZING*/
+/*FILTER*/
+/* BREAKPOINT */
+/* CUSTOM VARIABLE */
+/* BASE VARIABLE */
+/* FONT-FAMILY */
+/* PLEASE INCLUDE IN CSS OR HTML FROM GOOGLE FONT */
+/* Quicksand */
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap");
+/* gotham */
+@font-face {
+  src: local("Gotham Bold"), url("../font/GothamBold.ttf") format("ttf");
+  font-family: 'Gotham Bold';
+}
+
+/* FONT SIZE */
+/* PLEASE SET ALL FONT-SIZE WITH PERCENT 
+   EXCEPT FONT-SIZE WITHOUT ACTION CHANGE FONT-SIZE
+   EXAMPLE : [ font-size: pxtopercent(16); ] 
+*/
+/* RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bg-set {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* OPACITY & HOVER UNDERLINE */
+.hvO {
+  -webkit-transition: 0.15s ease opacity;
+  -moz-transition: 0.15s ease opacity;
+  -ms-transition: 0.15s ease opacity;
+  -o-transition: 0.15s ease opacity;
+  transition: 0.15s ease opacity;
+}
+
+.hvO:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.hvU:hover {
+  text-decoration: underline;
+}
+
+/* CONTAINER */
+.bigCont {
+  width: 100%;
+  margin: 0 5%;
+}
+
+@media screen and (max-width: 1200px) {
+  .bigCont {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+.cont {
+  width: 1088px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .cont {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+/* SECTION */
+.sectionPage {
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .sectionPage {
+    padding: 40px 0;
+  }
+}
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1976D2;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: #FFFFFF !important;
+}
+
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  color: white;
+}
+
+/* CUSTOM VARIABLE */
+/* BASE VARIABLE */
+
+/*# sourceMappingURL=print.css.map */

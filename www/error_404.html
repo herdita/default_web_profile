@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- TITLE -->
+  <title> </title>
+  <!-- Keywords & Description -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- End keywords & Description -->
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <!-- Link Base CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/hamburger.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" media="print" type="text/css" href="assets/css/print.css">
+  <!-- META OG-->
+  <!-- GOOGLE ANALYTICS -->
+ </head>
+ <body>
+  <div id="AllBox">
+   <!-- HEADER -->
+   <header id="header" class="header fixed">
+    <div class="firstRow">
+     <div class="cont">
+      <div class="inner">
+      </div>
+     </div>
+    </div>
+   </header>
+   <div class="navSp">
+   </div>
+   <!-- MAIN CONTENT -->
+   <main id="main" class="error404">
+    <!-- BREADCRUMB -->
+    <section class="breadcrumbPage">
+     <div class="cont">
+      <div class="inner">
+       <ul>
+        <li><a href="index.html" class="under">トップページ</a></li>
+        <li class="arrow">error_404</li>
+       </ul>
+      </div>
+     </div>
+    </section>
+    <section class="sectionPage firstRow">
+     <div class="cont">
+      <div class="inner">
+       <h2>404</h2>
+       <p>お探しのページは見つかりませんでした。</p>
+      </div>
+     </div>
+    </section>
+   </main>
+   <!-- FOOTER -->
+   <footer id="footer">
+    <div class="cont">
+     <div class="inner">
+     </div>
+    </div>
+   </footer>
+  </div>
+  <!-- JAVASCRIPT -->
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/js/popper.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script>
+  // HAMBURGER MENU
+  $('.icon-menu').click(function() {
+   $('.navSp').toggleClass('active');
+   $('.navSp').stop().slideToggle();
+   $(this).toggleClass('is-active');
+  });
+  // Child NAvigation Menu Sp
+  $('.navSp .linkSp').click(function(e) {
+   // e.preventDefault();
+   $(this).next('ul.subMenu').stop().slideToggle();
+   $(this).toggleClass('nav-change');
+  });
+  // Add animation scroll when hover to header
+  if (window.matchMedia("(min-width: 1025px)").matches) {
+   function init() {
+    // スクロールして何ピクセルでアニメーションさせるか
+    var px_change = 150;
+    // スクロールのイベントハンドラを登録
+    window.addEventListener('scroll', function(e) {
+     // 変化するポイントまでスクロールしたらクラスを追加
+     if ($(window).scrollTop() > px_change) {
+      $("#header").addClass("scroll");
+      // 変化するポイント以前であればクラスを削除
+     } else if ($(".header").hasClass("fixed")) {
+      $("#header").removeClass("scroll");
+     }
+    });
+   }
+   window.onload = init();
+  }
+  </script>
+  <script>
+  var coll = document.getElementsByClassName("question");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+   coll[i].addEventListener("click", function() {
+    this.classList.toggle("is-active");
+    $(this).siblings('.answer').stop().slideToggle();
+   });
+  }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+   duration: 1200,
+   once: true,
+  })
+  AOS.init({
+   disable: 'mobile'
+  });
+  </script>
+ </body>
+</html>
