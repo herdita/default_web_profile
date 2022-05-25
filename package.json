@@ -7,7 +7,7 @@
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "bootstrap": "^4.0.0-alpha.6",
-    "grunt": "^1.1.0",
+    "grunt": "^1.5.3",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-nunjucks-2-html": "^3.0.0",
